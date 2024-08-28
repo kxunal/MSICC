@@ -16,16 +16,16 @@ BOT_TOKEN = getenv("BOT_TOKEN", "")
 # Get your mongo url from cloud.mongodb.com
 MONGO_DB_URI = getenv("MONGO_DB_URI", "")
 
-DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 5400))
+DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 9999))
 
 SONG_DOWNLOAD_DURATION = int(
-    getenv("SONG_DOWNLOAD_DURATION_LIMIT", "5400")
+    getenv("SONG_DOWNLOAD_DURATION_LIMIT", "9999")
 )
 # Chat id of a group for logging bot's activities
 LOGGER_ID = int(getenv("LOGGER_ID", ""))
 
 # Get this value from @Hot_Girl_Robot on Telegram by /id
-OWNER_ID = int(getenv("OWNER_ID", "7048354045"))
+OWNER_ID = int(getenv("OWNER_ID", "6257927828"))
 
 ## Fill these variables if you're deploying on heroku.
 # Your heroku app name
@@ -35,15 +35,15 @@ HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/venombolteop/VenomMusic",
+    "https://github.com/ERA990/MSICC",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "main")
 GIT_TOKEN = getenv(
     "GIT_TOKEN", None
 )  # Fill this variable if your upstream repository is private
 
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/VenomOwners")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/Venom_Chatz")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/STORM_TECHH")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/STORM_CHATZ")
 
 
 AUTO_SUGGESTION_MODE = getenv("AUTO_SUGGESTION_MODE", "false")
@@ -55,7 +55,7 @@ SPOTIFY_CLIENT_SECRET = getenv("SPOTIFY_CLIENT_SECRET", "")
 
 
 # Maximum limit for fetching playlist's track from youtube, spotify, apple links.
-PLAYLIST_FETCH_LIMIT = int(getenv("PLAYLIST_FETCH_LIMIT", 25))
+PLAYLIST_FETCH_LIMIT = int(getenv("PLAYLIST_FETCH_LIMIT", 2500))
 
 CLEANMODE_DELETE_MINS = int(
     getenv("CLEANMODE_MINS", "5"))
@@ -85,21 +85,21 @@ clean = {}
 
 
 START_IMG_URL = getenv(
-    "START_IMG_URL", "https://te.legra.ph/file/754e95311eccb48b7aafc.jpg"
+    "START_IMG_URL", "https://graph.org/file/8cbea013cc7cf663eb8fe.jpg"
 )
 PING_IMG_URL = getenv(
-    "PING_IMG_URL", "https://te.legra.ph/file/754e95311eccb48b7aafc.jpg"
+    "PING_IMG_URL", "https://graph.org/file/9077cd2ba5818efef2d28.jpg"
 )
-PLAYLIST_IMG_URL = "https://te.legra.ph/file/754e95311eccb48b7aafc.jpg"
-STATS_IMG_URL = "https://te.legra.ph/file/754e95311eccb48b7aafc.jpg"
-TELEGRAM_AUDIO_URL = "https://te.legra.ph/file/754e95311eccb48b7aafc.jpg"
-TELEGRAM_VIDEO_URL = "https://te.legra.ph/file/754e95311eccb48b7aafc.jpg"
-STREAM_IMG_URL = "https://te.legra.ph/file/754e95311eccb48b7aafc.jpg"
-SOUNCLOUD_IMG_URL = "https://te.legra.ph/file/754e95311eccb48b7aafc.jpg"
-YOUTUBE_IMG_URL = "https://te.legra.ph/file/754e95311eccb48b7aafc.jpg"
-SPOTIFY_ARTIST_IMG_URL = "https://te.legra.ph/file/754e95311eccb48b7aafc.jpg"
-SPOTIFY_ALBUM_IMG_URL = "https://te.legra.ph/file/754e95311eccb48b7aafc.jpg"
-SPOTIFY_PLAYLIST_IMG_URL = "https://te.legra.ph/file/754e95311eccb48b7aafc.jpg"
+PLAYLIST_IMG_URL = "https://graph.org/file/eb1e2b58e17964083db73.jpg"
+STATS_IMG_URL = "https://graph.org/file/3e1a29249c83104c035af.jpg"
+TELEGRAM_AUDIO_URL = "https://graph.org/file/ebc1cd4853f51d4fd7cdb.jpg"
+TELEGRAM_VIDEO_URL = "https://graph.org/file/948c175c8bfb3d96080ad.jpg"
+STREAM_IMG_URL = "https://graph.org/file/e8311d4fff8527c550185.jpg"
+SOUNCLOUD_IMG_URL = "https://graph.org/file/e8311d4fff8527c550185.jpg"
+YOUTUBE_IMG_URL = "https://graph.org/file/e8311d4fff8527c550185.jpg"
+SPOTIFY_ARTIST_IMG_URL = "https://graph.org/file/e8311d4fff8527c550185.jpg"
+SPOTIFY_ALBUM_IMG_URL = "https://graph.org/file/e8311d4fff8527c550185.jpg"
+SPOTIFY_PLAYLIST_IMG_URL = "https://graph.org/file/e8311d4fff8527c550185.jpg"
 
 
 def time_to_seconds(time):

@@ -1,8 +1,8 @@
 import asyncio
 from pyrogram import Client, filters
 from pyrogram.types import Message
-from VIPMUSIC import app
-from VIPMUSIC.misc import SUDOERS
+from VenomX import app
+from VenomX.misc import SUDOERS
 
 @app.on_message(filters.command(["leave"], prefixes=["/"]) & SUDOERS)
 async def leave(_, message: Message):

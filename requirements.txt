@@ -25,3 +25,12 @@ unidecode
 yt-dlp
 youtube-search
 youtube-search-python
+google
+MukeshAPI
+googlesearch-python
+flask_restful
+flask
+gunicorn
+gpytranslate
+wget
+openai==0.28.0

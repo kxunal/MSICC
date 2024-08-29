@@ -3,10 +3,11 @@ from typing import List
 
 import yaml
 
+LOGGERS = "KEXX_XD"
+
 languages = {}
 languages_present = {}
 
-LOGGERS = "STORM_CHATZ"
 
 def get_string(lang: str):
     return languages[lang]

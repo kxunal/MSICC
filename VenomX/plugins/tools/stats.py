@@ -13,13 +13,14 @@ from VenomX import app
 from VenomX.core.userbot import assistants
 from VenomX.misc import SUDOERS, mongodb
 from VenomX.plugins import ALL_MODULES
-from VenomX.utils.database import get_served_chats, get_served_users, get_sudoers
+#from VenomX.utils.database import get_served_chats, get_served_users, get_sudoers
+from VenomX.utils.database import get_sudoers
 from VenomX.utils.decorators.language import language, languageCB
 from VenomX.utils.inline.stats import back_stats_buttons, stats_buttons
 from config import BANNED_USERS
 
 
-@app.on_message(filters.command(["stats", "gstats"]) & filters.group & ~BANNED_USERS)
+@app.on_message(filters.command(["stats", "gstats"]) & ~BANNED_USERS)
 @language
 async def stats_global(client, message: Message, _):
     upl = stats_buttons(_, True if message.from_user.id in SUDOERS else False)
@@ -50,14 +51,14 @@ async def overall_stats(client, CallbackQuery, _):
     except:
         pass
     await CallbackQuery.edit_message_text(_["gstats_1"].format(app.mention))
-    served_chats = len(await get_served_chats())
-    served_users = len(await get_served_users())
+    served_chats = [3248]
+    served_users = [7899]
     text = _["gstats_3"].format(
         app.mention,
         len(assistants),
         len(BANNED_USERS),
-        served_chats,
-        served_users,
+        len(served_chats),
+        len(served_users),
         len(ALL_MODULES),
         len(SUDOERS),
         config.AUTO_LEAVING_ASSISTANT,
@@ -101,8 +102,8 @@ async def bot_stats(client, CallbackQuery, _):
     call = await mongodb.command("dbstats")
     datasize = call["dataSize"] / 1024
     storage = call["storageSize"] / 1024
-    served_chats = len(await get_served_chats())
-    served_users = len(await get_served_users())
+    served_chats = [3248]
+    served_users = [7899]
     text = _["gstats_5"].format(
         app.mention,
         len(ALL_MODULES),
@@ -117,8 +118,8 @@ async def bot_stats(client, CallbackQuery, _):
         str(total)[:4],
         str(used)[:4],
         str(free)[:4],
-        served_chats,
-        served_users,
+        len(served_chats),
+        len(served_users),
         len(BANNED_USERS),
         len(await get_sudoers()),
         str(datasize)[:6],

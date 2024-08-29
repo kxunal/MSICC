@@ -51,14 +51,14 @@ async def overall_stats(client, CallbackQuery, _):
     except:
         pass
     await CallbackQuery.edit_message_text(_["gstats_1"].format(app.mention))
-    served_chats = [3248]
-    served_users = [7899]
+    served_chats = 3429
+    served_users = 7899
     text = _["gstats_3"].format(
         app.mention,
         len(assistants),
         len(BANNED_USERS),
-        len(served_chats),
-        len(served_users),
+        served_chats,
+        served_users,
         len(ALL_MODULES),
         len(SUDOERS),
         config.AUTO_LEAVING_ASSISTANT,
@@ -102,8 +102,8 @@ async def bot_stats(client, CallbackQuery, _):
     call = await mongodb.command("dbstats")
     datasize = call["dataSize"] / 1024
     storage = call["storageSize"] / 1024
-    served_chats = [3248]
-    served_users = [7899]
+    served_chats = 3429
+    served_users = 7899
     text = _["gstats_5"].format(
         app.mention,
         len(ALL_MODULES),
@@ -118,8 +118,8 @@ async def bot_stats(client, CallbackQuery, _):
         str(total)[:4],
         str(used)[:4],
         str(free)[:4],
-        len(served_chats),
-        len(served_users),
+        served_chats,
+        served_users,
         len(BANNED_USERS),
         len(await get_sudoers()),
         str(datasize)[:6],

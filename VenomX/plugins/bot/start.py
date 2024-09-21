@@ -101,6 +101,8 @@ async def start_pm(client, message: Message, _):
 async def start_gp(client, message: Message, _):
     out = start_panel(_)
     uptime = int(time.time() - _boot_)
+    await message.reply_sticker("CAACAgUAAxkBAAJyBmbu78BWum2ooQzg4EW1dYhf7EafAALRFAACyfh5VxOvtGo4LVfyHgQ")
+    await asyncio.sleep(1)    
     await message.reply_photo(
         photo=config.START_IMG_URL,
         caption=_["start_1"].format(app.mention, get_readable_time(uptime)),
